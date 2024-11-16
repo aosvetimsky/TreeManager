@@ -1,0 +1,6 @@
+@TreeManager.Services.Api_HostAddress = http://localhost:5117
+
+GET {{TreeManager.Services.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

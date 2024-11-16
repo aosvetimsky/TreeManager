@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TreeManager.Contracts\TreeManager.Contracts.csproj" />
+    <ProjectReference Include="..\TreeManager.Domain\TreeManager.Domain.csproj" />
+    <ProjectReference Include="..\TreeManager.Persistence\TreeManager.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
