@@ -17,7 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeManager.Services", "app
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeManager.Services.Api", "app\TreeManager.Services.Api\TreeManager.Services.Api.csproj", "{DD841631-B748-4F1C-917F-74E8E34370A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeManager.Contracts", "app\TreeManager.Contracts\TreeManager.Contracts.csproj", "{8384DB0B-36A1-4ECC-B86D-7E8382D1102C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeManager.Contracts", "app\TreeManager.Contracts\TreeManager.Contracts.csproj", "{8384DB0B-36A1-4ECC-B86D-7E8382D1102C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9655E727-88DE-422C-BDD0-472C37CDA2BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeManager.Services.Api.Tests", "test\TreeManager.Services.Api.Tests\TreeManager.Services.Api.Tests.csproj", "{3A901F00-6847-41A3-879D-07E99EEDED3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeManager.Domain.Tests", "test\TreeManager.Domain.Tests\TreeManager.Domain.Tests.csproj", "{F4F7F2CE-8A7F-40D3-8013-62FBE6054DF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{8384DB0B-36A1-4ECC-B86D-7E8382D1102C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8384DB0B-36A1-4ECC-B86D-7E8382D1102C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8384DB0B-36A1-4ECC-B86D-7E8382D1102C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A901F00-6847-41A3-879D-07E99EEDED3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A901F00-6847-41A3-879D-07E99EEDED3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A901F00-6847-41A3-879D-07E99EEDED3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A901F00-6847-41A3-879D-07E99EEDED3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F7F2CE-8A7F-40D3-8013-62FBE6054DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F7F2CE-8A7F-40D3-8013-62FBE6054DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F7F2CE-8A7F-40D3-8013-62FBE6054DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F7F2CE-8A7F-40D3-8013-62FBE6054DF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +69,8 @@ Global
 		{3F8DC981-AC83-462F-9167-BA188411A5B8} = {A71071D2-7603-4303-A870-013D2A16F91E}
 		{DD841631-B748-4F1C-917F-74E8E34370A7} = {A71071D2-7603-4303-A870-013D2A16F91E}
 		{8384DB0B-36A1-4ECC-B86D-7E8382D1102C} = {A71071D2-7603-4303-A870-013D2A16F91E}
+		{3A901F00-6847-41A3-879D-07E99EEDED3A} = {9655E727-88DE-422C-BDD0-472C37CDA2BC}
+		{F4F7F2CE-8A7F-40D3-8013-62FBE6054DF0} = {9655E727-88DE-422C-BDD0-472C37CDA2BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85B0549A-07A0-4F3F-8325-55A69E262953}

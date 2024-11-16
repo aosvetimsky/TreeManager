@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using TreeManager.Services.Api.Controllers.Tree.Transport;
 using TreeManager.Contracts.Tree;
-using TreeManager.Contracts.Common;
-using TreeManager.Services.Api.Infrastructure.ExceptionHandling;
 
 namespace TreeManager.Services.Api.Controllers.Tree
 {
@@ -46,7 +44,9 @@ namespace TreeManager.Services.Api.Controllers.Tree
                 return HandleOperationInvalidResult(result.Error);
             }
 
-            return Results.Ok(result.Result);
+            var tree = await _treeAppService.FindTree(result.Result);
+
+            return Results.Ok(_treeMapper.ToTreeTransport(tree));
         }
     }
 }

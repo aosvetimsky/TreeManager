@@ -27,7 +27,12 @@ namespace TreeManager.Domain.Trees
         }
         public void SetRootNode(TreeNode node)
         {
-            Root = node ?? throw new ArgumentNullException();
+            Root = node ?? throw new ArgumentNullException(nameof(node));
+
+            if (FlattenNodes().GroupBy(n => n.Name).Count() > 1)
+            {
+                throw new ArgumentException("Root contains nodes with the same names");
+            }
         }
 
         public TreeNode? FindNode(int nodeId) => FlattenNodes().FirstOrDefault(n => n.Id == nodeId);

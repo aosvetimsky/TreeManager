@@ -10,7 +10,7 @@ using TreeManager.Services;
 using TreeManager.Services.Api;
 using TreeManager.Services.Api.Infrastructure.ExceptionHandling;
 
-internal class Program
+public partial class Program
 {
     private static void Main(string[] args)
     {
@@ -64,5 +64,3 @@ internal class Program
         await ctx.Database.EnsureCreatedAsync();
     }
 }
-
-

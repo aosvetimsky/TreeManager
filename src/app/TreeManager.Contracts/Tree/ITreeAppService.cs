@@ -5,7 +5,7 @@ namespace TreeManager.Contracts.Tree
 {
     public interface ITreeAppService
     {
-        Task<OperationResult<int>> CreateTree(TreeDto tree);
+        Task<OperationResult<string>> CreateTree(TreeDto tree);
         Task<TreeDto?> FindTree(string treeName);
         Task<OperationResult> CreateTreeNode(string treeName, int parentTreeNodeId, string name);
         Task<OperationResult> UpdateTreeNode(string treeName, int treeNodeId, string name);

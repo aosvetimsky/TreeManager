@@ -19,22 +19,27 @@ namespace TreeManager.Services.Application.Tree
             _treeMapper = treeMapper;
         }
 
-        public async Task<OperationResult<int>> CreateTree(TreeDto treeDto)
+        public async Task<OperationResult<string>> CreateTree(TreeDto treeDto)
         {
             var existingTree = await _treeRepository.GetTreeByName(treeDto.Name);
 
             if (existingTree != null)
             {
-                return OperationResult<int>.Failed(TreeErrors.TreeNameAlreadyExistsError);
+                return OperationResult<string>.Failed(TreeErrors.TreeNameAlreadyExistsError);
             }
 
             var tree = _treeMapper.ToTree(treeDto);
+
+            if (tree.Root == null)
+            {
+                return OperationResult<string>.Failed(TreeErrors.TreeRootIsEmptyError);
+            }
 
             await _treeRepository.SaveTree(tree);
 
             await _treeRepository.UnitOfWork.SaveEntitiesAsync();
 
-            return OperationResult<int>.Succeeded(tree.Id);
+            return OperationResult<string>.Succeeded(tree.Name);
         }
 
         public async Task<TreeDto?> FindTree(string treeName)

@@ -25,10 +25,6 @@ namespace TreeManager.Services.Api.Controllers.Tree.Transport
         public required Tree Tree { get; set; }
     }
 
-    public record CreateTreeResponse
-    {
-    }
-
     public record CreateTreeNodeRequest
     {
         public int ParentTreeNodeId { get; set; }
@@ -36,17 +32,9 @@ namespace TreeManager.Services.Api.Controllers.Tree.Transport
         public required string TreeNodeName { get; set; }
     }
 
-    public record CreateTreeNodeResponse
-    {
-    }
-
     public record DeleteTreeNodeRequest
     {
         public int TreeNodeId { get; set; }
-    }
-
-    public record DeleteTreeNodeResponse
-    {
     }
 
     public record RenameTreeNodeRequest

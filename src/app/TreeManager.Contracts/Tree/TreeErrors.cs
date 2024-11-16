@@ -4,6 +4,7 @@ namespace TreeManager.Contracts.Tree
 {
     public static class TreeErrors
     {
+        public static readonly OperationError TreeRootIsEmptyError = new("Tree root is empty");
         public static readonly OperationError TreeNotFoundError = new("Tree is not found");
         public static readonly OperationError TreeNameAlreadyExistsError = new("Tree name already exists");
         public static readonly OperationError TreeNodeNotFoundError = new("Tree node is not found");
