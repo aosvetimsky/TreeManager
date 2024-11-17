@@ -29,7 +29,7 @@ namespace TreeManager.Domain.Trees
         {
             Root = node ?? throw new ArgumentNullException(nameof(node));
 
-            if (FlattenNodes().GroupBy(n => n.Name).Count() > 1)
+            if (FlattenNodes().GroupBy(n => n.Name).Any(n => n.Count() > 1))
             {
                 throw new ArgumentException("Root contains nodes with the same names");
             }
